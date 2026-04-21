@@ -11,7 +11,6 @@ script = ExtResource("1_1wt74")
 [node name="Label" type="Label" parent="." unique_id=1227626623]
 offset_right = 40.0
 offset_bottom = 23.0
-text = "Hello world!"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=46581469]
 position = Vector2(47.5, 12)
