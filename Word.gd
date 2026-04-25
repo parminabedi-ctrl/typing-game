@@ -8,6 +8,9 @@ func set_word(w: String):
 	print("SETTING WORD:", word)   # 👈 add this
 	$Label.text = word
 
+func update_display():
+	$Label.text = word.substr(typed.length())  # Show remaining letters
+# get_parent().get_node("Player").boost_jump()
 func check_letter(letter: String):
 	# Check next correct letter
 	if word.substr(typed.length(), 1) == letter:
