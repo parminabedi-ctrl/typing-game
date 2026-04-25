@@ -9,8 +9,8 @@ func set_word(w: String):
 
 func _input(event):
 	if event is InputEventKey and event.pressed:
-		var char = char(event.unicode)
-		if char.is_valid_identifier():  # simple check for letters
+		var character = char(event.unicode)
+		if character.is_valid_identifier():  # simple check for letters
 			typed += char
 			update_display()
 			if typed == word:
@@ -21,3 +21,4 @@ func _input(event):
 
 func update_display():
 	$Label.text = word.substr(typed.length())  # Show remaining letters
+# get_parent().get_node("Player").boost_jump()

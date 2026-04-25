@@ -1,16 +1,19 @@
+
 extends Node
 
-@onready var http_request = $WordapiRequester
+@onready var http_request = $WordapiRequestor
 var words = []
 
 func _ready():
+	print("READY RUNNING")
 	fetch_words()
 
 func fetch_words():
 	var url = "https://random-word-api.herokuapp.com/word?number=10"  # Adjust for more words
 	http_request.request(url)
 
-func _on_word_api_requester_request_completed(result, response_code, headers, body):
+func _on_WordapiRequestor_request_completed(result, response_code, headers, body):
+	print("REQUEST COMPLETED")
 	if response_code == 200:
 		var json = JSON.parse_string(body.get_string_from_utf8())
 		words = json  # Assuming it returns an array of strings
