@@ -4,20 +4,19 @@
 [ext_resource type="Texture2D" uid="uid://bp3nhni7qduqe" path="res://assets/Chopin_0001.png" id="2_v6fml"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p0vlq"]
-size = Vector2(669, 1201)
+size = Vector2(72, 123)
 
 [node name="Player" type="CharacterBody2D" unique_id=367777575]
 script = ExtResource("1_v6fml")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1404970282]
-position = Vector2(456.5, 592)
-scale = Vector2(3.0390625, 3.078125)
+position = Vector2(-57.999992, 1211.75)
+scale = Vector2(0.31250003, 0.31138402)
 texture = ExtResource("2_v6fml")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1741740570]
-position = Vector2(446.5, 690.5)
+position = Vector2(-59, 1221.5)
 shape = SubResource("RectangleShape2D_p0vlq")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=989786705]
-position = Vector2(501, 679)
-zoom = Vector2(0.1, 0.1)
+position = Vector2(-58, 1233)

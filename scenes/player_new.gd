@@ -11,10 +11,10 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta
 
 	if Input.is_key_pressed(KEY_LEFT):
-		
+		print("LEFT KEY DIRECTLY DETECTED")
 		velocity.x = -SPEED
 	elif Input.is_key_pressed(KEY_RIGHT):
-		 
+		print("RIGHT KEY DIRECTLY DETECTED")  
 		velocity.x = SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)

@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://20u3x7msn3ss"]
+
+[ext_resource type="Texture2D" uid="uid://bp3nhni7qduqe" path="res://assets/Chopin_0001.png" id="1_vjt3m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wm45n"]
+size = Vector2(8, 15)
+
+[node name="Player_new" type="CharacterBody2D" unique_id=43453274]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=812956956]
+position = Vector2(2.9802322e-08, -0.49999967)
+scale = Vector2(0.035714284, 0.03794643)
+texture = ExtResource("1_vjt3m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2075108181]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_wm45n")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=513537500]
+zoom = Vector2(3, 3)

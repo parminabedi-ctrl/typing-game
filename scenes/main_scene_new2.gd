@@ -11,13 +11,13 @@ func _ready():
 	print("READY 3")
 
 func spawn_words():
-	var word_node = preload("res://scenes/Word_new.tscn").instantiate()
-	word_node.set_word("hello")
-	add_child(word_node)
-	word_node.global_position = Vector2(0, 0)
-	print("word position: ", word_node.position)
-	print("word visible: ", word_node.visible)
-		
+	print("SPAWN WORDS CALLED")
+	for i in range(words.size()):
+		print("SPAWNING:", words[i])
+		var word_node = preload("res://scenes/Word_new.tscn").instantiate()
+		word_node.set_word(words[i])
+		word_node.position = Vector2(randf_range(100, 1000), randf_range(100, 500))
+		add_child(word_node)
 
 func _input(event):
 	if event is InputEventKey and event.pressed:
